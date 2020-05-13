@@ -1,12 +1,12 @@
 $pinkHeader: #f0859e;
 $pink: #f0778d;
-$White: #FFF;
+$White: #fff;
 
 .sideBarWrp {
   background: $pinkHeader;
   display: flex;
   justify-content: space-between;
-  padding: .8rem 1.5rem;
+  padding: 0.8rem 1.5rem;
 
   .img-wrp {
     display: flex;
@@ -43,4 +43,16 @@ $White: #FFF;
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
   }
+}
+
+.push {
+  width: 75px;
+}
+
+.show {
+  display: block !important;
+}
+
+.hide {
+  display: none !important;
 }

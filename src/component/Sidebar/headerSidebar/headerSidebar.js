@@ -6,8 +6,8 @@ import './headerSidebar.scss'
 function HeaderSidebar() {
   const [active, setActive] = useState(false);
   return (
-    <div className="sideBarWrp">
-      <div className="img-wrp">
+    <div className={`sideBarWrp ${!active ? "push" : ""}`}>
+      <div className={`${active ? "show" : "hide"}`}>
         <img src={logo} />
       </div>
       <div onClick={() => setActive(!active)} className={`humburger ${!active ? "change" : ""}`}>
