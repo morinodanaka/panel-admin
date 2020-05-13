@@ -8,7 +8,7 @@ function HeaderSidebar() {
   return (
     <div className="sideBarWrp">
       <div className="img-wrp">
-        <img src={logo}></img>
+        <img src={logo} />
       </div>
       <div onClick={() => setActive(!active)} className={`humburger ${!active ? "change" : ""}`}>
         <div className="bar1"></div>

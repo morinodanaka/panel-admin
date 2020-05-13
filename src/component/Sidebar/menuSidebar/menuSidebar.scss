@@ -3,10 +3,10 @@ $grayWhite: #ffffff99;
 $blueOverlay: #1d2c40d9;
 
 aside {
-  padding: 2px 1.5rem 1.5rem;
   background: url("../../../assets/images/bg.jpg") no-repeat center;
   position: relative;
   height: 100vh;
+  padding-right: 0px;
 
   &:after {
     position: absolute;
@@ -18,45 +18,98 @@ aside {
     right: 0;
   }
 
-  h5 {
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    margin: 0.75rem 0;
-    font-weight: bold;
-    color: $grayWhite;
-    white-space: nowrap;
+  .aside-wrp {
+    padding: 2px 1.5rem 1.5rem;
+    height: 100%;
+    overflow-y: scroll;
     position: relative;
     z-index: 10;
-  }
 
-  ul {
-    position: relative;
-    z-index: 10;
-    list-style: none;
-    list-style-position: inside;
-    padding: 0;
+    h5 {
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      margin: 0.75rem 0;
+      font-weight: bold;
+      color: $grayWhite;
+      white-space: nowrap;
+      position: relative;
+      z-index: 10;
+    }
 
-    li {
-      a {
-        text-decoration: none;
-        color: $grayWhite !important;
-        display: block;
-        line-height: 2.5rem;
-        height: 2.5rem;
-        position: relative;
-        border-radius: 0.25rem;
-        padding: 0 15px;
-        transition: all 0.5s;
+    ul {
+      position: relative;
+      z-index: 10;
+      list-style: none;
+      list-style-position: inside;
+      padding: 0;
 
-        &:hover {
-          background: #ffffff1f;
-          text-decoration: none;
+      li {
+        & > ul {
+          background: #ff000000;
+          padding-left: 15px;
+          display: block;
+          width: 100%;
+          border-left: 5px solid #c1b9b96e;
+          position: relative;
+          left: 20px;
+          margin: 5px 0;
         }
 
-        .custom {
-          margin-right: 10px;
+        a {
+          text-decoration: none;
+          color: $grayWhite !important;
+          display: block;
+          line-height: 2.5rem;
+          height: 2.5rem;
+          position: relative;
+          border-radius: 0.25rem;
+          padding: 0 15px;
+          transition: all 0.5s;
+
+          &:hover {
+            background: #ffffff1f;
+            text-decoration: none;
+          }
+
+          .custom {
+            margin-right: 10px;
+          }
+
+          .angel {
+            position: absolute;
+            right: 0;
+            top: 13px;
+          }
+          .show {
+            display: block;
+          }
+          .hide {
+            display: none;
+          }
         }
       }
     }
   }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: none;
+  height: 40px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #607d8b4d;
+  border-radius: 15px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
