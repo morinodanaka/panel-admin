@@ -79,12 +79,7 @@ aside {
             position: absolute;
             right: 0;
             top: 13px;
-          }
-          .show {
-            display: block;
-          }
-          .hide {
-            display: none;
+            transition: all 0.5s;
           }
         }
       }
@@ -112,4 +107,17 @@ aside {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+.show {
+  display: block !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+.rotate {
+  transform: rotate(180deg);
+  transition: all 0.5s;
 }

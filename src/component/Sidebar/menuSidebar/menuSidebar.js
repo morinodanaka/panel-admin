@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom'
-import { faAddressBook, faCarrot, faArrowDown, faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import { faAddressBook, faCarrot, faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./menuSidebar.scss";
 
 
 function MenuSidebar() {
+  const [show, setShow] = useState(false);
   return (
     <aside>
       <div className="aside-wrp">
@@ -110,10 +111,10 @@ function MenuSidebar() {
             <Link>
               <FontAwesomeIcon className="custom" icon={faCarrot} />
               About us
-              <FontAwesomeIcon className="custom angel" icon={faAngleDown} />
+              <FontAwesomeIcon onClick={() => setShow(!show)} className={`custom angel ${!show ? "" : "rotate"}`} icon={faAngleDown} />
             </Link>
             {/* subMenu */}
-            <ul>
+            <ul className={`${show ? "show" : "hide"}`}>
               <li>
                 <Link>
                   <FontAwesomeIcon className="custom" icon={faCarrot} />
