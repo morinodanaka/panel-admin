@@ -1,7 +1,7 @@
 import React from 'react'
 import Sidebar from '../component/Sidebar/Sidebar'
 import Content from '../component/Content/Content'
-import { Container, Row, Col } from "react-bootstrap"
+import { Container, Row } from "react-bootstrap"
 
 function Home() {
   return (

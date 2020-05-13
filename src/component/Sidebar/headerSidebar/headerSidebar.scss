@@ -1,10 +1,18 @@
 $pinkHeader: #f0859e;
 $pink: #f0778d;
+$White: #FFF;
 
 .sideBarWrp {
   background: $pinkHeader;
+  display: flex;
+  justify-content: space-between;
+  padding: .8rem 1.5rem;
 
   .img-wrp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .humburger {
@@ -14,10 +22,10 @@ $pink: #f0778d;
     .bar1,
     .bar2,
     .bar3 {
-      width: 35px;
-      height: 5px;
-      background-color: #333;
-      margin: 6px 0;
+      width: 30px;
+      height: 2px;
+      background-color: $White;
+      margin: 9px 0;
       transition: 0.4s;
     }
   }

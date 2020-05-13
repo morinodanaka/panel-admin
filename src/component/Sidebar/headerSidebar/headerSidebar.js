@@ -5,7 +5,6 @@ import './headerSidebar.scss'
 
 function HeaderSidebar() {
   const [active, setActive] = useState(false);
-
   return (
     <div className="sideBarWrp">
       <div className="img-wrp">
@@ -16,7 +15,6 @@ function HeaderSidebar() {
         <div className="bar2"></div>
         <div className="bar3"></div>
       </div>
-
     </div>
   )
 }
