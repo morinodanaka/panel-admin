@@ -1,20 +1,61 @@
-$bgMenu:'';
+$bgMenu: "../../../assets/images/bg.jpg";
+$grayWhite: #ffffff99;
+$blueOverlay: #1d2c40d9;
 
 aside {
-  h3 {
+  padding: 2px 1.5rem 1.5rem;
+  background: url("../../../assets/images/bg.jpg") no-repeat center;
+  position: relative;
+  height: 100vh;
+
+  &:after {
+    position: absolute;
+    content: "";
+    background: $blueOverlay;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  h5 {
     text-transform: uppercase;
     font-size: 0.8rem;
     margin: 0.75rem 0;
     font-weight: bold;
-    color: #033C73;
+    color: $grayWhite;
     white-space: nowrap;
     position: relative;
+    z-index: 10;
   }
 
   ul {
+    position: relative;
+    z-index: 10;
+    list-style: none;
+    list-style-position: inside;
+    padding: 0;
+
     li {
       a {
         text-decoration: none;
+        color: $grayWhite !important;
+        display: block;
+        line-height: 2.5rem;
+        height: 2.5rem;
+        position: relative;
+        border-radius: 0.25rem;
+        padding: 0 15px;
+        transition: all 0.5s;
+
+        &:hover {
+          background: #ffffff1f;
+          text-decoration: none;
+        }
+
+        .custom {
+          margin-right: 10px;
+        }
       }
     }
   }
