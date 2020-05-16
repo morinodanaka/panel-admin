@@ -14,21 +14,23 @@ function HeaderContent() {
         <div className="imgWrp">gfweg</div>
         <FontAwesomeIcon icon={faAngleDown} />
         <div className="account">
+
           <ul>
+            <li className="header">activity</li>
             <li>
-              <a>kwem</a>
+              <a>Chat</a>
             </li>
             <li>
-              <a>kwem</a>
+              <a>Edit Acount</a>
             </li>
             <li>
-              <a>kwem</a>
+              <a>Setting</a>
             </li>
             <li>
-              <a>kwem</a>
+              <a>Recover Password</a>
             </li>
             <li>
-              <a>kwem</a>
+              <a>Logs</a>
             </li>
           </ul>
         </div>
