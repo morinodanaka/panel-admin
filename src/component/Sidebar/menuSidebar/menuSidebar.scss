@@ -2,6 +2,39 @@ $bgMenu: "../../../assets/images/bg.jpg";
 $grayWhite: #ffffff99;
 $blueOverlay: #1d2c40d9;
 
+
+aside.push {
+  .aside-wrp {
+    h5 {
+      display: none;
+    }
+
+    ul {
+      li {
+        a {
+          font-size: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          left: -5px;
+
+          svg {
+            font-size: initial;
+          }
+
+          .custom {
+            margin: 0;
+          }
+
+          .angel {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
 aside {
   background: url("../../../assets/images/bg.jpg") no-repeat center;
   position: relative;
@@ -44,7 +77,7 @@ aside {
       padding: 0;
 
       li {
-        & > ul {
+        &>ul {
           background: #ff000000;
           padding-left: 15px;
           display: block;
@@ -78,7 +111,7 @@ aside {
           .angel {
             position: absolute;
             right: 0;
-            top: 13px;
+            top: 10px;
             transition: all 0.5s;
           }
         }
@@ -86,6 +119,8 @@ aside {
     }
   }
 }
+
+
 
 /* width */
 ::-webkit-scrollbar {
@@ -109,9 +144,7 @@ aside {
   background: #555;
 }
 
-.push {
-  width: 75px;
-}
+.push {}
 
 .show {
   display: block !important;

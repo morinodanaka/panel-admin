@@ -3,14 +3,14 @@ import logo from '../../../assets/images/logo.png';
 import './headerSidebar.scss'
 
 
-function HeaderSidebar() {
-  const [active, setActive] = useState(false);
+function HeaderSidebar(props) {
+  const { show, setShow } = props;
   return (
-    <div className={`sideBarWrp ${!active ? "push" : ""}`}>
-      <div className={`${active ? "show" : "hide"}`}>
+    <div className={`sideBarWrp ${!show ? "push" : ""}`}>
+      <div className={`${show ? "show" : "hide"}`}>
         <img src={logo} />
       </div>
-      <div onClick={() => setActive(!active)} className={`humburger ${!active ? "change" : ""}`}>
+      <div onClick={() => setShow(!show)} className={`humburger ${!show ? "change" : ""}`}>
         <div className="bar1"></div>
         <div className="bar2"></div>
         <div className="bar3"></div>

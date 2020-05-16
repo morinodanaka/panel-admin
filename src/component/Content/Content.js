@@ -3,7 +3,7 @@ import { Col } from 'react-bootstrap'
 
 function Content() {
   return (
-    <Col xs="6" sm="9">
+    <Col >
       i'm Content
     </Col>
   )

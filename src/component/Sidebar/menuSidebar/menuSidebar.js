@@ -5,10 +5,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./menuSidebar.scss";
 
 
-function MenuSidebar() {
+function MenuSidebar(props) {
+
   const [show, setShow] = useState(true);
+  const { active } = props;
   return (
-    <aside>
+    <aside className={!active ? "push" : ""}>
       <div className="aside-wrp">
         <h5>MENU</h5>
         <ul>
@@ -64,7 +66,7 @@ function MenuSidebar() {
             <Link>
               <FontAwesomeIcon className="custom" icon={faCarrot} />
               About us
-              <FontAwesomeIcon onClick={() => setShow(!show)} className={`custom angel ${show ? "" : "rotate"}`} icon={faAngleDown} />
+              <FontAwesomeIcon onClick={() => setShow(!show)} className={`custom angel ${show ? "" : "rotate"}`} icon={faAngleDown} size="lg" />
             </Link>
             {/* subMenu */}
             <ul className={`${!show ? "show" : "hide"}`}>
