@@ -1,24 +1,31 @@
-import React from 'react'
-import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import React, { useState } from 'react'
+import { faAngleDown, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "./headerContent.scss"
+import image from '../../../assets/images/profile.png';
+import "./headerContent.scss";
 
 function HeaderContent() {
+  const [open, setOpen] = useState(true)
+  const [search, setSearch] = useState(true)
+
   return (
     <header>
       <div className="search">
-        <div className="imgWrp">ryg</div>
-
+        <input className={`${!search ? "inputSearch" : ""}`} />
+        <div className="imgWrp" onClick={() => setSearch(!search)}>
+          <FontAwesomeIcon icon={faSearch} />
+        </div>
       </div>
       <div className="profileMenu">
-        <div className="imgWrp">gfweg</div>
-        <FontAwesomeIcon icon={faAngleDown} />
-        <div className="account">
-
+        <div className="imgWrp">
+          <img src={image} />
+        </div>
+        <FontAwesomeIcon icon={faAngleDown} onClick={() => setOpen(!open)} />
+        <div className={`account ${!open ? "" : "down"}`}>
           <ul>
             <li className="header">activity</li>
             <li>
-              <a>Chat</a>
+              <a>Chat</a><i className="chatQuantity">1</i>
             </li>
             <li>
               <a>Edit Acount</a>
@@ -34,9 +41,7 @@ function HeaderContent() {
             </li>
           </ul>
         </div>
-
       </div>
-
     </header>
   )
 }

@@ -1,0 +1,44 @@
+.bannerContent {
+  line-height: 1.5;
+  color: #495057;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.55);
+  display: flex;
+  padding: 0 20px;
+  margin: 30px 0;
+
+  .iconWrp {
+    width: 75px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: red;
+    margin-right: 30px;
+
+    svg {
+      background: -webkit-linear-gradient(120deg, #fccb90 0%, #d57eeb 100%) !important;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .txtWrp {
+    h4 {
+      font-size: 1.25rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #495057;
+      text-align: left;
+    }
+
+    p {
+      padding: 3px 0 0;
+      font-size: 0.88rem;
+      opacity: .6;
+      line-height: 1.5;
+      color: #495057;
+      text-align: left;
+    }
+  }
+}
