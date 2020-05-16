@@ -5,16 +5,14 @@ import { Container, Row } from "react-bootstrap"
 import "./home.scss"
 
 function Home() {
-  return (
-    <>
-      <Container fluid>
-        <Row>
-          <Sidebar />
-          <Content />
-        </Row>
-      </Container>
-    </>
-  )
+  return (<>
+    <Container fluid>
+      <Row>
+        <Sidebar />
+        <Content />
+      </Row>
+    </Container>
+  </>)
 }
 
 export default Home;

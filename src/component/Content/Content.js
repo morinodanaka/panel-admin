@@ -1,10 +1,11 @@
 import React from 'react'
 import { Col } from 'react-bootstrap'
+import HeaderContent from './headerContent/headerContent'
 
 function Content() {
   return (
-    <Col >
-      i'm Content
+    <Col xs="6" sm="9">
+      <HeaderContent />
     </Col>
   )
 }
