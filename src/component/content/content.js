@@ -11,8 +11,7 @@ function Content() {
       <div className="content">
         <HeaderContent />
         <BannerContent />
-        <Row>
-          <SqrLeftTop />
+        <Row noGutters>
           <SqrLeftTop />
         </Row>
       </div>
