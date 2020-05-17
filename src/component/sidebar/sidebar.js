@@ -7,7 +7,7 @@ function Sidebar() {
   const [show, setShow] = useState(true);
 
   return (
-    <Col style={{ padding: "0" }} sm={`${show ? "3" : ""}`}>
+    <Col sm={`${show ? "3" : ""}`}>
       <HeaderSidebar show={show} setShow={setShow} />
       <MenuSidebar active={show} />
     </Col>
