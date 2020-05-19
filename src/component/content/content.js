@@ -4,6 +4,7 @@ import HeaderContent from './headerContent/headerContent'
 import BannerContent from './bannerContent/bannerContent'
 import SqrLeftTop from './sqrLeftTop/sqrLeftTop'
 import "./content.scss"
+import SqrRightTop from './sqrRightTop/sqrRightTop'
 
 function Content() {
   return (
@@ -13,6 +14,7 @@ function Content() {
         <BannerContent />
         <Row noGutters>
           <SqrLeftTop />
+          <SqrRightTop />
         </Row>
       </div>
     </Col>

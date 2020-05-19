@@ -1,29 +1,64 @@
-import React, { useState } from 'react'
-import { Col, Tabs, Tab, Sonnet } from 'react-bootstrap'
+import React from 'react'
+import { Col, ProgressBar, Row } from 'react-bootstrap'
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import { faRocket } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import 'react-tabs/style/react-tabs.css';
 import "./sqrLeftTop.scss"
 
 function SqrLeftTop() {
-  const [key, setKey] = useState('home');
   return (
     <>
       <Col xs={6}>
-        <Tabs
-          id="controlled-tab-example"
-          activeKey={key}
-          onSelect={(k) => setKey(k)}
-        >
-          <Tab eventKey="home" title="Home" >
-            Home Content
-          </Tab>
-          <Tab eventKey="profile" title="Profile">
-            Profile Content
-          </Tab>
-          <Tab eventKey="contact" title="Contact" >
-          </Tab>
-        </Tabs>
-      </Col>
-      <Col xs={6}>
-        <div className="wrpBox">ckjwn</div>
+        <div className="wrpTab">
+          <div className="wrpBox">
+            <Tabs>
+              <TabList>
+
+                <Tab>Title 1</Tab>
+                <Tab>Title 2</Tab>
+                <span className="title" sm={6}>
+                  BANDWIDTH REPORTS<FontAwesomeIcon icon={faRocket} /></span>
+              </TabList>
+
+              <TabPanel>
+                <div className="progresBox">
+                  <Row noGutters>
+                    <Col sm={6}>
+                      <div className="padding">
+                        <h6>over view in month</h6><b>80%</b>
+                        <ProgressBar variant="success" animated now={80} />
+                      </div>
+                    </Col>
+                    <Col sm={6}>
+                      <div className="padding">
+                        <h6>over view in month</h6><b>30%</b>
+                        <ProgressBar variant="danger" animated now={30} />
+                      </div>
+                    </Col>
+                    <Col sm={6}>
+                      <div className="padding">
+                        <h6>over view in month</h6><b>65%</b>
+                        <ProgressBar variant="warning" animated now={65} />
+                      </div>
+                    </Col>
+                    <Col sm={6}>
+                      <div className="padding">
+                        <h6>over view in month</h6><b>45%</b>
+                        <ProgressBar animated now={45} />
+                      </div>
+                    </Col>
+                  </Row>
+
+                </div>
+              </TabPanel>
+              <TabPanel>
+                <h2>Any content 2</h2>
+              </TabPanel>
+            </Tabs>
+          </div>
+        </div>
       </Col>
     </>
   )
