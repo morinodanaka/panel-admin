@@ -1,0 +1,57 @@
+.wrpTabRightBottom {
+  .wrpBox {
+    .box {
+      background: #fff;
+      margin: 0 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: 15px;
+      min-height: 430px;
+      border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+      box-shadow: 0 0.46875rem 2.1875rem rgba(0, 0, 0, 0.03), 0 0.9375rem 1.40625rem rgba(0, 0, 0, 0.03), 0 0.25rem 0.53125rem rgba(0, 0, 0, 0.05), 0 0.125rem 0.1875rem rgba(0, 0, 0, 0.03);
+      border-width: 0;
+      margin-bottom: 100px;
+      position: relative;
+
+      .boxWrp {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 15px;
+
+        .svgWrp {
+          padding: 10px;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 15px;
+        }
+
+        .green {
+          background: #8bc34a54;
+          color: #4caf50;
+        }
+
+        strong {
+          text-transform: uppercase;
+          color: rgba(0, 0, 0, 0.7);
+          font-weight: bold;
+          font-size: 1rem;
+
+        }
+
+        h5 {
+          text-transform: uppercase;
+          color: rgba(0, 0, 0, 0.7);
+          font-weight: bold;
+          font-size: 0.88rem;
+        }
+      }
+    }
+  }
+}

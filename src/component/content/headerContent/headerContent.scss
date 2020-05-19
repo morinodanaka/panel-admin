@@ -1,6 +1,5 @@
-$darkPink:#f2878b;
+$darkPink: #f2878b;
 $grayWhite: #ffffff99;
-
 
 header {
   display: flex !important;
@@ -47,7 +46,8 @@ header {
       top: 53px;
       min-width: 15rem;
       opacity: 1;
-      transition: all .3s;
+      transition: all 0.3s;
+      z-index: 999;
 
       ul {
         padding: 0;
@@ -62,7 +62,7 @@ header {
           justify-content: space-between;
 
           a {
-            color: #033C73;
+            color: #033c73;
             text-decoration: none;
             padding: 5px 0;
 
@@ -73,9 +73,9 @@ header {
 
           .chatQuantity {
             padding: 5px;
-            background: #2FA4E7;
+            background: #2fa4e7;
             padding: 5px;
-            background: #2FA4E7;
+            background: #2fa4e7;
             border-radius: 50%;
             width: 25px;
             height: 25px;
@@ -86,8 +86,7 @@ header {
             font-weight: bold;
             font-variant: normal;
             font-style: normal;
-            font-size: .8em;
-
+            font-size: 0.8em;
           }
         }
 
@@ -96,15 +95,14 @@ header {
           font-size: 0.7333333333rem;
           color: #868e96;
           font-weight: bold;
-          padding: .5rem 0rem;
+          padding: 0.5rem 0rem;
         }
-
       }
     }
 
     .down {
       top: -300px;
-      opacity: .001;
+      opacity: 0.001;
     }
   }
 
@@ -117,14 +115,13 @@ header {
       border: 0;
       width: 0;
       display: none;
-      transition: all .5s;
+      transition: all 0.5s;
     }
 
     input.inputSearch {
       display: block;
       width: 100px;
-      transition: all .5s;
-
+      transition: all 0.5s;
     }
 
     .imgWrp {
