@@ -1,6 +1,6 @@
 import React from 'react'
 import { Col, Row } from 'react-bootstrap'
-import { faRocket } from "@fortawesome/free-solid-svg-icons";
+import { faBug, faBullhorn } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Chart from "react-google-charts";
 
@@ -17,7 +17,7 @@ function SqrLeftBottom() {
               <Col sm={6}>
                 <div className="box">
                   <div className="svgWrp blue">
-                    <FontAwesomeIcon size="2x" icon={faRocket} />
+                    <FontAwesomeIcon size="2x" icon={faBullhorn} />
                   </div>
                   <strong>17.25</strong>
                   <h5>Pizza Chart</h5>
@@ -46,7 +46,7 @@ function SqrLeftBottom() {
               <Col sm={6}>
                 <div className="box">
                   <div className="svgWrp red">
-                    <FontAwesomeIcon size="2x" icon={faRocket} />
+                    <FontAwesomeIcon size="2x" icon={faBug} />
                   </div>
                   <strong>17.25</strong>
                   <h5>Pizza Chart</h5>
