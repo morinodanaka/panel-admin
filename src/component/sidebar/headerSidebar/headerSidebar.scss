@@ -44,9 +44,8 @@ $White: #fff;
     transform: rotate(45deg) translate(-8px, -8px);
   }
 }
-
-.push {
-  width: 60px;
+.sideBarWrp.push{
+  justify-content: center;
 }
 
 .show {

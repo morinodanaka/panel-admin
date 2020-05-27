@@ -1,16 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom'
 import { faAddressBook, faCarrot, faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useSelector, useDispatch} from 'react-redux';
+import { openAction } from '../../../redux/actions'
 import "./menuSidebar.scss";
 
 
 function MenuSidebar(props) {
-
-  const [show, setShow] = useState(true);
-  const { active } = props;
+  const activeState = useSelector((state) => state.active.active)
+  const openState = useSelector((state) => state.open.open)
+  const dispatch = useDispatch()
   return (
-    <aside className={!active ? "push" : ""}>
+    <aside className={activeState ? "push" : ""}>
       <div className="aside-wrp">
         <h5>MENU</h5>
         <ul>
@@ -66,10 +68,10 @@ function MenuSidebar(props) {
             <Link>
               <FontAwesomeIcon className="custom" icon={faCarrot} />
               About us
-              <FontAwesomeIcon onClick={() => setShow(!show)} className={`custom angel ${show ? "" : "rotate"}`} icon={faAngleDown} size="lg" />
+              <FontAwesomeIcon onClick={()=> dispatch(openAction())} className={`custom angel ${openState ? "" : "rotate"}`} icon={faAngleDown} size="lg" />
             </Link>
-            {/* subMenu */}
-            <ul className={`${!show ? "show" : "hide"}`}>
+            {/* subMenu handle 2 states for show sub menu classes*/}
+            <ul className={`${!openState && !activeState ? "show" : "hide"}`}>
               <li>
                 <Link>
                   <FontAwesomeIcon className="custom" icon={faCarrot} />
