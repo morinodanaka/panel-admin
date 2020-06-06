@@ -7,6 +7,8 @@ import SqrRightTop from './sqrRightTop/sqrRightTop'
 import SqrLeftBottom from './sqrLeftBottom/sqrLeftBottom'
 import SqrRightBottom from './sqrRightBottom/sqrRightBottom'
 import { useSelector } from 'react-redux'
+import Carousel from './carousel/carousel'
+import TableHolder from './table/tableHolder'
 import "./content.scss"
 
 
@@ -24,6 +26,12 @@ function Content() {
         <Row noGutters>
           <SqrLeftBottom />
           <SqrRightBottom />
+        </Row>
+        <Row noGutters>
+          <Carousel/>
+        </Row>
+        <Row noGutters>
+          <TableHolder/>
         </Row>
       </div>
     </Col>

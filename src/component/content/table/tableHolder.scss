@@ -1,0 +1,46 @@
+.tableHolder{
+    background: #fff;
+    padding: 10px 15px !important;
+    strong{
+        padding: 0;
+        display: block;
+        border-bottom: solid gray 1px;
+    }
+    .table-responsive{
+        padding-top: 10px;
+        table{
+            tr{
+                td,th{
+                    border:0
+                }
+                td{
+                    .statusWrp{
+                        padding: 2px 15px;
+                        border-radius: 5px;
+                        border:0
+                    }
+                    .compelete{
+                        color: #fff;
+                    background-color: #73A839;
+                    }
+                    .pending{
+                        color: #fff;
+                    background-color: #DD5600;
+                    }
+                    .onHold{
+                        color: #fff;
+                    background-color: #c71c22;
+                    }
+                    .inProcess{
+                        color: #fff;
+                    background-color:#2FA4E7;
+                    }
+                    .details{
+                        color: #fff;
+                    background: #033C73 linear-gradient(180deg, #295988, #033C73) repeat-x;
+                    }
+                }
+            }
+        }
+    }
+}
