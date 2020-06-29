@@ -1,38 +1,68 @@
-import React from 'react'
-import {
-  AreaChart, Area, Tooltip,
-} from 'recharts';
+import React, { useState, useEffect } from 'react'
+import { AreaChart, Area, Tooltip } from 'recharts';
 const data = [
   {
-    name: 'Page A', uv: 4000, pv: 2400, amt: 2400,
+    name: 'Page A', uv: 400, pv: 240, amt: 400,
   },
   {
-    name: 'Page B', uv: 3000, pv: 1398, amt: 2210,
+    name: 'Page B', uv: 300, pv: 138, amt: 210,
   },
   {
-    name: 'Page C', uv: 2000, pv: 9800, amt: 2290,
+    name: 'Page C', uv: 200, pv: 980, amt: 290,
   },
   {
-    name: 'Page D', uv: 2780, pv: 3908, amt: 2000,
+    name: 'Page D', uv: 280, pv: 898, amt: 200,
   },
   {
-    name: 'Page E', uv: 1890, pv: 4800, amt: 2181,
+    name: 'Page E', uv: 890, pv: 480, amt: 281,
   },
   {
-    name: 'Page F', uv: 2390, pv: 3800, amt: 2500,
+    name: 'Page F', uv: 390, pv: 380, amt: 500,
   },
   {
-    name: 'Page G', uv: 3490, pv: 4300, amt: 2100,
+    name: 'Page G', uv: 3490, pv: 700, amt: 2100,
   },
 ];
 
 function ChartWithFilterRightBottom() {
+  const [filter, setFilter] = useState("")
+  const [filteredData, setFilteredData] = useState()
+  const [search, setSearch] = useState()
+  useEffect(() => {
+    if (!!search && !!filter) {
+      const filtered = data.filter(chartData => { 
+        return data.filter(searchData => {
+          return searchData.pv == chartData.pv
+        })
+      })
+      console.log(filtered)
+    }
+    else {
+      return setFilteredData(undefined)
+    }
+  }, [search])
+
+  useEffect(() => {
+    if (!!filter) {
+      const filtered = data.filter(chartData => { // we are in if scope ! so need to save filtered in something we use State in here, use function state to set flag
+        return chartData.pv > filter
+      })
+      setFilteredData(filtered)
+    } else {
+      return setFilteredData(data)
+    }
+  }, [filter])
   return (
     <div>
+      <button onClick={() => { setFilter("800") }}>800</button>
+      <button onClick={() => { setFilter("600") }}>600</button>
+      <button onClick={() => { setFilter("400") }}>400</button>
+      <button onClick={() => { setFilter("") }}>reset</button>
+      <input onChange={(e) => setSearch(e.target.value)}></input>
       <AreaChart
         width={400}
         height={200}
-        data={data}
+        data={filteredData ? filteredData : data}
         margin={{
           top: 10, right: 30, left: 0, bottom: 0,
         }}
