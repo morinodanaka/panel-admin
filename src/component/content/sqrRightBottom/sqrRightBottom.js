@@ -4,7 +4,7 @@ import { faBrain } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import "./sqrRightBottom.scss"
-import ChartWithFilter from '../charts/chartWithFilter';
+import ChartWithFilterRightBottom from '../charts/chartWithFilterRightBottom';
 
 
 function SqrRightBottom() {
@@ -22,7 +22,7 @@ function SqrRightBottom() {
                     </div>
                     <strong>17.25</strong>
                     <h5>Pizza Chart</h5>
-                    <ChartWithFilter/>
+                    <ChartWithFilterRightBottom/>
                   </div>
                 </div>
               </Col>
